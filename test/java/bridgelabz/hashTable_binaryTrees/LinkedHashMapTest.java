@@ -13,7 +13,7 @@ public class LinkedHashMapTest {
 	
 	@Before
 	public void init() {
-		paragraph="To be or not to be";
+		paragraph="Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 		linkedHashMap = new LinkedHashMap<String, Integer>();
 		words = paragraph.toLowerCase().split(" ");
 		for(String word: words) {
@@ -24,12 +24,24 @@ public class LinkedHashMapTest {
         		value = value+1;
         	linkedHashMap.add(word,value);
         }
-		linkedHashMap.showMap();
+		System.out.println("Original Map-");
+		//linkedHashMap.showMap();
+		
+		//Removing node containing avoidable
+		linkedHashMap.removeFromMap("avoidable");
+		//Showing Map after removal
+		System.out.println("New Map-");
+		//linkedHashMap.showMap();
 	}
 	
 	
 	@Test
-	public void whenAddedSentanceFrequencyOfToIsTwo() {
-		assertEquals(3,(int)linkedHashMap.get("to"));
+	public void whenAddedParagraphFrequencyOfParanoidIsThree() {
+		assertEquals(3,(int)linkedHashMap.get("paranoid"));
+	}
+	
+	@Test
+	public void whenRemovedShouldShowKeyValueNull () {
+		assertNull(linkedHashMap.get("avoidable"));
 	}
 }
