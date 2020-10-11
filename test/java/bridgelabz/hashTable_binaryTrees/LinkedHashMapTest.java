@@ -13,7 +13,7 @@ public class LinkedHashMapTest {
 	
 	@Before
 	public void init() {
-		paragraph="To be or not to be";
+		paragraph="Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 		linkedHashMap = new LinkedHashMap<String, Integer>();
 		words = paragraph.toLowerCase().split(" ");
 		for(String word: words) {
@@ -29,7 +29,7 @@ public class LinkedHashMapTest {
 	
 	
 	@Test
-	public void whenAddedSentanceFrequencyOfToIsTwo() {
-		assertEquals(3,(int)linkedHashMap.get("to"));
+	public void whenAddedParagraphFrequencyOfParanoidIsThree() {
+		assertEquals(3,(int)linkedHashMap.get("paranoid"));
 	}
 }
