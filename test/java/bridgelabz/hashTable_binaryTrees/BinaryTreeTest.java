@@ -68,4 +68,11 @@ public class BinaryTreeTest {
 				&& binaryTree.rootNode.rightBranch.rightBranch.key==95);
 		assertTrue(condition);
 	}
+
+	//Testing for search
+	@Test
+	public void whenSearched63FoundAt5thPositionFromLeft() {
+		BinaryTreeNode<Integer> searchNode=binaryTree.search(63);
+		assertEquals(63, (int)searchNode.key);
+	}
 }
