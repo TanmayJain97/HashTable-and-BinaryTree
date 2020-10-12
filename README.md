@@ -1,9 +1,3 @@
 # HashTable-and-BinaryTree
 
-Modified to UC 3 - Create function to find frequency of Words in a paragraph using HashMaps
-
-1. Create LinkedList for each index and store the words and its frequency
-
-2. Use hashcode to find index of the words in the para
-
-Remove avoidable word from hashmap
+Modified to UC 1 - Create function to create binary tree and add values 56,30 and 70
